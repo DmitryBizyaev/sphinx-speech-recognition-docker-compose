@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  sphinx-frontend:
+    build:
+      context: ./sphinx-frontend
+      args:
+        CURRENT_MACHINE_IP: "10.20.14.140"
+    ports:
+      - 5555:5555
+  sphinx-backend:
+    build: ./sphinx-backend
+    ports:
+      - 5000:5000
