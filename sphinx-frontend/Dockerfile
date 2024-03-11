@@ -6,6 +6,7 @@ RUN apt-get update && \
     apt-get install -y git python3-pip && \
     pip3 install --upgrade pip && \
     pip3 install Flask && \
+    pip3 install requests && \
     git clone https://github.com/DmitryBizyaev/sphinx-speech-recognition-manual-frontend.git && \
     cd sphinx-speech-recognition-manual-frontend && \
     sed -i "s/localhost/$CURRENT_MACHINE_IP/g" app.py
