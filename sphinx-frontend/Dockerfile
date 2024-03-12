@@ -1,6 +1,6 @@
 FROM ubuntu:20.04
 
-ARG CURRENT_MACHINE_IP="127.0.0.1"
+ARG API_SERVER_ADDRESS="127.0.0.1"
 
 RUN apt-get update && \
     apt-get install -y git python3-pip && \

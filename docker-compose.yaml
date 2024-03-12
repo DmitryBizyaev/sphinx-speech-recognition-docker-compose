@@ -2,11 +2,16 @@ version: "3.8"
 
 services:
   sphinx-frontend:
-    build: ./sphinx-frontend
+    build: 
+      context: ./sphinx-frontend
+      args:
+        - API_SERVER_ADDRESS=sphinx-backend
     ports:
       - 5555:5555
     networks:
       - sphinx-net
+    depends_on:
+      - sphinx-backend
 
   sphinx-backend:
     build: ./sphinx-backend
