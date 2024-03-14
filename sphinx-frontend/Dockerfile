@@ -9,7 +9,7 @@ RUN apt-get update && \
     pip3 install requests && \
     git clone https://github.com/DmitryBizyaev/sphinx-speech-recognition-manual-frontend.git && \
     cd sphinx-speech-recognition-manual-frontend && \
-    sed -i "s/localhost/$CURRENT_MACHINE_IP/g" app.py
+    sed -i "s/localhost/$API_SERVER_ADDRESS/g" app.py
 
 WORKDIR /sphinx-speech-recognition-manual-frontend
 
